@@ -209,7 +209,7 @@
 
 								<li class="menu-item">
 
-									<a href="https://forms.gle/CLh4vKf3yf1UYgoc7" target="_blank" class="menu-link" data-href="#section-contact"><div>결제하기</div></a>
+									<a href="https://forms.gle/CLh4vKf3yf1UYgoc7" target="_blank" class="menu-link myLink_reset" data-href="#section-contact"><div>결제하기</div></a>
 
 								</li>
 
@@ -1174,7 +1174,8 @@
 
 						<div class="mx-auto text-center" style="max-width: 900px;">
 
-							<h2 class="mb-0 fw-light ls-1">우리의 안주 구독 서비스에 반하셨나요?<a href="https://forms.gle/CLh4vKf3yf1UYgoc7" target="_blank" data-scrollto="#template-contactform" data-offset="140" data-easing="easeInOutExpo" data-speed="1250" class="button button-border button-circle button-light button-large my-0" style="position: relative; top: -3px;">지금 바로 구독 시작하기</a></h2>
+							<h2 class="mb-0 fw-light ls-1">우리의 안주 구독 서비스에 반하셨나요?<a 
+								<a href="https://forms.gle/CLh4vKf3yf1UYgoc7" target="_blank" data-scrollto="#template-contactform" data-offset="140" data-easing="easeInOutExpo" data-speed="1250" class="myLink_reset button button-border button-circle button-light button-large my-0" style="position: relative; top: -3px;">지금 바로 구독 시작하기</a></h2>
 
 						</div>
 
@@ -1728,7 +1729,7 @@
 
 									<!-- <li><a href="#" data-scrollto="#section-blog" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Blog</a></li> -->
 
-									<li><a href="https://forms.gle/CLh4vKf3yf1UYgoc7" target="_blank" data-scrollto="#section-contact" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">결제하기</a></li>
+									<li><a href="https://forms.gle/CLh4vKf3yf1UYgoc7" target="_blank" data-scrollto="#section-contact" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="myLink_reset">결제하기</a></li>
 
 								</ul>
 
@@ -2093,6 +2094,21 @@
 		}); //ready
 
 	</script>
+<script>
+	// 'myLink_reset' 클래스를 가진 모든 링크를 선택합니다.
+	var links = document.querySelectorAll('.myLink_reset');
+  
+	// 각 링크에 대해 함수를 실행합니다.
+	links.forEach(function(link) {
+	  // 클릭 이벤트 리스너를 추가합니다.
+	  link.addEventListener('click', function(event) {
+		// 기본 이벤트를 방지합니다.
+		event.preventDefault();
+		// 새 탭에서 링크를 엽니다.
+		window.open(this.href, '_blank');
+	  }, true); // true는 이 이벤트 리스너가 캡처 단계에서 실행되어야 함을 나타냅니다.
+	});
+  </script>
 
 
 
